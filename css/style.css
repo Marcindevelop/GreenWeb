@@ -1,0 +1,106 @@
+html, body, .grid-container { height: 100%; margin: 0; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Nav Nav Nav Nav"
+    "Slider Slider Slider Slider"
+    "Article Article Article Article"
+    "Aside Aside Aside Aside"
+    "Section Section Section Section"
+    "Fotter Fotter Fotter Fotter";
+}
+
+.Nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ".";
+  grid-area: Nav;
+}
+
+.Slider {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ".";
+  grid-area: Slider;
+}
+
+.Article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Article-One Article-Three"
+    "Article-Two Article-Three";
+  grid-area: Article;
+}
+
+.Article-One { grid-area: Article-One; }
+
+.Article-Two { grid-area: Article-Two; }
+
+.Article-Three { grid-area: Article-Three; }
+
+.Aside {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "One Two Three";
+  grid-area: Aside;
+}
+
+.One { grid-area: One; }
+
+.Two { grid-area: Two; }
+
+.Three { grid-area: Three; }
+
+.Section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Set-A Set-B Set-C .";
+  grid-area: Section;
+}
+
+.Set-A { grid-area: Set-A; }
+
+.Set-B { grid-area: Set-B; }
+
+.Set-C { grid-area: Set-C; }
+
+.Fotter {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ".";
+  grid-area: Fotter;
+}
+
+
+/* For presentation only, no need to copy the code below */
+.grid-container * {
+  position: relative;
+}
+
+.grid-container *:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
